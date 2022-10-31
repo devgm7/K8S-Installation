@@ -6,7 +6,7 @@ Guide for Kubernetes installation
 sudo ./install.sh controlplane
 ```
 
-## For Control Plane
+## For Worker Node
 ```
 sudo ./install.sh workernode
 ```
