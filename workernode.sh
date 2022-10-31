@@ -1,10 +1,7 @@
-sudo adduser priv
-sudo usermod -aG sudo priv
-su - priv
 sudo apt update && sudo apt upgrade -y
 sudo swapoff -a
 sudo hostnamectl set-hostname workernode
-
+echo "Installing Docker (docker.io)"
 sudo apt-get update && sudo apt-get install -y docker.io
 sudo apt-get update
 sudo apt-get install -y apt-transport-https ca-certificates curl
@@ -13,5 +10,6 @@ echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https:/
 sudo apt-get update
 sudo apt-get install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
-
+echo "Rebooting in 5 seconds"
+sleep 5s
 sudo reboot
