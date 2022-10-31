@@ -1,6 +1,6 @@
 sudo apt update && sudo apt upgrade -y
 sudo swapoff -a
-sudo hostnamectl set-hostname controlplane
+sudo hostnamectl set-hostname $1
 echo "Installing Docker (docker.io)"
 sudo apt-get update && sudo apt-get install -y docker.io
 sudo apt-get update
